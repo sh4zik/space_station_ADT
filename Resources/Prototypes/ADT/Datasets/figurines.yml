@@ -1,0 +1,5 @@
+- type: localizedDataset
+  id: FigurinesBattlstorm
+  values:
+    prefix: figurines-lir-
+    count: 5

@@ -32,6 +32,8 @@
   - type: Food
   - type: Sprite
     state: chocolatefreezy_caramel
+  - type: StackPrice
+    price: 15
 
 - type: entity
   parent: ADTFoodFrozenBase
@@ -641,6 +643,8 @@
     items:
       - id: ADTFoodFrozenVanillaIceCream
       - id: ADTFoodFrozenVanillaIceCreamTrash
+  - type: StackPrice
+    price: 15
 
 - type: entity
   name: Frozen Packed

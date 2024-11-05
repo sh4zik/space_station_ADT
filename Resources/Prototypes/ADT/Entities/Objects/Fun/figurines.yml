@@ -29,6 +29,26 @@
     stealGroup: Figurines
 
 - type: entity
+  parent: BaseItem
+  id: ADTBaseFigurineNoSteal
+  name: figurine
+  description: A small miniature.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: ADT/Objects/Fun/figurines.rsi
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 100
+  - type: StaticPrice
+    price: 75
+  - type: Tag
+    tags:
+    - Figurine
+  - type: UseDelay
+    delay: 10
+
+- type: entity
   parent: ADTBaseFigurine
   id: ToyFigurineBrigmedic
   name: brigmedic figure
@@ -36,3 +56,14 @@
   components:
   - type: Sprite
     state: brigmedic
+
+- type: entity
+  parent: ADTBaseFigurineNoSteal
+  id: ToyFigurineBattlstorm
+  name: Lir Battlstorm
+  description: Strange figure of some sort of vulpcanine. Yet it look somewhere familiar for you
+  components:
+  - type: Sprite
+    state: battlstorm
+  - type: SpeakOnUse
+    pack: FigurinesBattlstorm
