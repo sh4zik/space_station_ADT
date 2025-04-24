@@ -97,6 +97,7 @@
   - type: Wagging
   - type: Inventory
     speciesId: reptilian
+    templateId: ADTHumanoidWithTail ##ADT Tweak
     femaleDisplacements:
       jumpsuit:
         sizeMaps:

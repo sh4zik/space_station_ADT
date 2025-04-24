@@ -72,6 +72,8 @@
       drawdepth: Mobs
       scale: 0.9, 0.9
     - type: Wagging
+    - type: Inventory
+      templateId: ADTHumanoidWithTail
     - type: InteractionPopup
       successChance: 1
       interactSuccessString: petting-success-generic

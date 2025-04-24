@@ -50,6 +50,7 @@ public sealed class ClientClothingSystem : ClothingSystem
         {"socks", "SOCKS"}, // ADT-TWEAK
         {"underweart", "UNDERWEART"}, // ADT-TWEAK
         {"underwearb", "UNDERWEARB"}, // ADT-TWEAK
+        {"tail", "TAIL"}, // ADT-TWEAK
     };
 
     [Dependency] private readonly IResourceCache _cache = default!;

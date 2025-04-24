@@ -68,6 +68,7 @@
       scale: 0.95, 0.95
     - type: Wagging
     - type: Inventory
+      templateId: ADTHumanoidWithTail
       speciesId: vulp
       maleDisplacements:
         head:
@@ -164,3 +165,4 @@
             32:
               sprite: ADT/Mobs/Species/Vulpkanin/displacement.rsi
               state: head
+      templateId: ADTHumanoidWithTail

@@ -192,6 +192,7 @@
       Burn:
         sprite: Mobs/Effects/burn_damage.rsi
   - type: Inventory
+    templateId: ADTHumanoidWithTail
     displacements:
       jumpsuit:
         sizeMaps:

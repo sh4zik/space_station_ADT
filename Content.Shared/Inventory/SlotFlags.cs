@@ -29,6 +29,7 @@ public enum SlotFlags
     UNDERWEART = 1 << 10, // Sirena add
     UNDERWEARB = 1 << 10, // Sirena add
     SOCKS = 1 << 10,      // Sirena add
+    TAIL = 1 << 16,      // ADT Tweak
     All = ~NONE,
 
     WITHOUT_POCKET = All & ~POCKET

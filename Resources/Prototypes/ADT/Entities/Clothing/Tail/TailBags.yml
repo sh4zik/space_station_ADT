@@ -1,0 +1,237 @@
+- type: entity
+  parent: [Clothing, ContentsExplosionResistanceBase]
+  id: ADTClothingTail
+  name: a tail item
+  description: Yea.
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Tail/tailbag.rsi
+    state: icon
+  - type: Item
+    size: Huge
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - tail
+    # ADT Start
+    equipSound:
+      path: /Audio/ADT/Entities/backpack_equip.ogg
+    # ADT End
+  - type: Storage
+    grid:
+    - 0,0,1,2
+    - 4,0,5,2
+    maxItemSize: Huge
+    # ADT Start
+    blacklist:
+      tags:
+      - ADTOreBag
+    # ADT End
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  # to prevent bag open/honk spam
+  - type: UseDelay
+    delay: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  # ADT Start
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/ADT/Entities/backpack_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/ADT/Entities/backpack_drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/ADT/Entities/backpack_drop.ogg
+  # ADT End
+
+
+- type: entity
+  name: tail ore bag
+  id: ADTTailOreBag
+  parent: BaseStorageItem
+  description: A robust bag for salvage specialists and miners alike to carry large amounts of ore. Magnetises any nearby ores when attached to a belt.
+  components:
+  - type: MagnetPickup
+    slotFlags: TAIL
+  - type: Sprite
+    sprite: ADT/Clothing/Tail/tailorebag.rsi
+    state: icon
+  - type: Clothing
+    sprite: ADT/Clothing/Tail/tailorebag.rsi
+    quickEquip: false
+    slots:
+    - tail
+  - type: Item
+    size: Small
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,5,1
+    quickInsert: true
+    areaInsert: true
+    whitelist:
+      tags:
+        - ArtifactFragment
+        - Ore
+  - type: Dumpable
+  - type: Tag
+    tags:
+    - ADTOreBag
+    - ADTStorageBlacklist
+
+
+- type: entity
+  name: tail plant bag
+  id: ADTTailPlantBag
+  parent: BaseStorageItem
+  description: A bag for botanists to easily move their huge harvests.
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Tail/tailplantbag.rsi
+    state: icon
+  - type: Item
+    storedRotation: -90
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - tail
+  - type: Storage
+    grid:
+    - 0,0,5,2
+    maxItemSize: Small
+    quickInsert: true
+    areaInsert: true
+    whitelist:
+      components:
+        - Produce
+        - Seed
+  - type: Dumpable
+
+
+- type: entity
+  name: chemistry tail-bag
+  id: ADTTailChemBag
+  parent: BaseStorageItem
+  description: A bag for storing chemistry products, such as pills, pill canisters, bottles, and syringes.
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Tail/tailchembag.rsi
+    state: icon
+  - type: Clothing
+    sprite: ADT/Clothing/Tail/tailchembag.rsi
+    quickEquip: false
+    slots:
+    - tail
+  - type: Item
+    size: Ginormous
+  - type: Storage
+    maxItemSize: Normal # allow up to 5 large beakers / 10 beakers / 10 pill canisters
+    grid:
+    - 0,0,1,1
+    - 4,0,5,1
+    quickInsert: true
+    areaInsert: true
+    whitelist:
+      components:
+        - FitsInDispenser
+        - Pill
+      tags:
+        - Document
+        - PillCanister
+        - Bottle
+        - Syringe
+        - Dropper
+  - type: Dumpable
+
+
+
+
+
+- type: entity
+  parent: ADTClothingTail
+  id: ADTClothingTailAtmos
+  name: a tail item
+  description: Yea.
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Tail/ItemBags/tailbag-atmos.rsi
+
+- type: entity
+  parent: ADTClothingTail
+  id: ADTClothingTailBlueshield
+  name: a tail item
+  description: Yea.
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Tail/ItemBags/tailbag-blueshield.rsi
+
+- type: entity
+  parent: ADTClothingTail
+  id: ADTClothingTailBrigmedic
+  name: a tail item
+  description: Yea.
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Tail/ItemBags/tailbag-brigmedic.rsi
+
+- type: entity
+  parent: ADTClothingTail
+  id: ADTClothingTailCaptain
+  name: a tail item
+  description: Yea.
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Tail/ItemBags/tailbag-captain.rsi
+
+- type: entity
+  parent: ADTClothingTail
+  id: ADTClothingTailCargo
+  name: a tail item
+  description: Yea.
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Tail/ItemBags/tailbag-cargo.rsi
+
+- type: entity
+  parent: ADTClothingTail
+  id: ADTClothingTailClown
+  name: a tail item
+  description: Yea.
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Tail/ItemBags/tailbag-clown.rsi
+
+- type: entity
+  parent: ADTClothingTail
+  id: ADTClothingTailEngineering
+  name: a tail item
+  description: Yea.
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Tail/ItemBags/tailbag-engineering.rsi
+
+- type: entity
+  parent: ADTClothingTail
+  id: ADTClothingTailParamedic
+  name: a tail item
+  description: Yea.
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Tail/ItemBags/tailbag-paramedic.rsi
+
+- type: entity
+  parent: ADTClothingTail
+  id: ADTClothingTailSciense
+  name: a tail item
+  description: Yea.
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Tail/ItemBags/tailbag-science.rsi
